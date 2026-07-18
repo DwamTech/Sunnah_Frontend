@@ -1,0 +1,261 @@
+.section {
+  position: relative;
+  isolation: isolate;
+  direction: rtl;
+  overflow: hidden;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 58rem;
+  background:
+    radial-gradient(circle at 12% 18%, rgb(104 205 129 / 15%), transparent 24rem),
+    radial-gradient(circle at 90% 90%, rgb(213 168 77 / 10%), transparent 28rem),
+    linear-gradient(135deg, #07100b 0%, #10291a 52%, #09140d 100%);
+  color: #fff;
+}
+
+.section::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  opacity: 0.08;
+  background-image:
+    linear-gradient(30deg, var(--brand-primary) 1px, transparent 1px),
+    linear-gradient(150deg, var(--brand-primary) 1px, transparent 1px);
+  background-size: 5rem 8.6rem;
+  content: "";
+  mask-image: linear-gradient(to bottom, transparent, #000 35%, transparent);
+}
+
+.topShape {
+  height: 2.2rem;
+  background: linear-gradient(
+    176deg,
+    #f1f8f3 0%,
+    #edf6ef 47%,
+    rgb(16 41 26 / 58%) 49%,
+    transparent 51%
+  );
+}
+
+.container {
+  width: min(100% - 3rem, 82rem);
+  margin: 0 auto;
+  padding: 4.5rem 0 6.5rem;
+}
+
+.heading {
+  max-width: 45rem;
+  margin: 0 auto 3.5rem;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.65rem;
+  color: var(--brand-gold);
+  font-size: 1.02rem;
+  font-weight: 800;
+}
+
+.eyebrow svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.heading h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2.1rem, 3.6vw, 3.35rem);
+  line-height: 1.3;
+}
+
+.heading p {
+  max-width: 38rem;
+  margin: 1rem auto 0;
+  color: #b7c8bc;
+  font-size: clamp(1.08rem, 1.3vw, 1.2rem);
+  font-weight: 600;
+  line-height: 2.05;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.15rem;
+}
+
+.card {
+  --card-accent: 104 205 129;
+
+  position: relative;
+  overflow: hidden;
+  min-width: 0;
+  padding: 1.3rem 1.15rem 1.4rem;
+  border: 1px solid rgb(var(--card-accent) / 18%);
+  border-radius: 1.4rem;
+  background:
+    radial-gradient(circle at 50% 26%, rgb(var(--card-accent) / 15%), transparent 45%),
+    rgb(255 255 255 / 4%);
+  box-shadow: 0 1rem 2.6rem rgb(0 0 0 / 15%);
+  backdrop-filter: blur(8px);
+  transition:
+    border-color 200ms ease,
+    box-shadow 200ms ease,
+    transform 220ms ease;
+}
+
+.card:hover {
+  border-color: rgb(var(--card-accent) / 42%);
+  box-shadow:
+    0 1.5rem 3.2rem rgb(0 0 0 / 25%),
+    0 0 2rem rgb(var(--card-accent) / 8%);
+  transform: translateY(-0.55rem);
+}
+
+.emerald {
+  --card-accent: 104 205 129;
+}
+
+.amber {
+  --card-accent: 226 171 68;
+}
+
+.mint {
+  --card-accent: 141 219 166;
+}
+
+.rose {
+  --card-accent: 218 120 154;
+}
+
+.number {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: rgb(255 255 255 / 24%);
+  font-size: 2.25rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.visual {
+  position: relative;
+  display: grid;
+  height: 21rem;
+  place-items: center;
+  perspective: 60rem;
+}
+
+.halo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background: rgb(var(--card-accent) / 18%);
+  filter: blur(2.8rem);
+  transform: translate(-50%, -50%);
+  transition:
+    opacity 200ms ease,
+    transform 300ms ease;
+}
+
+.bookImage {
+  position: relative;
+  z-index: 1;
+  width: auto;
+  height: 19rem;
+  object-fit: contain;
+  filter: drop-shadow(0 1.2rem 1rem rgb(0 0 0 / 30%));
+  transform: rotateY(-4deg) rotateX(1deg);
+  transition:
+    filter 240ms ease,
+    transform 350ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.card:hover .bookImage {
+  filter:
+    drop-shadow(0 1.6rem 1.1rem rgb(0 0 0 / 38%))
+    drop-shadow(0 0 0.7rem rgb(var(--card-accent) / 20%));
+  transform: rotateY(2deg) rotateX(0) scale(1.045);
+}
+
+.card:hover .halo {
+  opacity: 0.9;
+  transform: translate(-50%, -50%) scale(1.15);
+}
+
+.details {
+  position: relative;
+  z-index: 2;
+  padding-top: 0.6rem;
+  text-align: center;
+}
+
+.meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--brand-gold);
+  font-size: 0.98rem;
+  font-weight: 800;
+}
+
+.meta svg {
+  width: 0.95rem;
+  height: 0.95rem;
+}
+
+.details h3 {
+  margin: 0.65rem 0 0;
+  color: #fff;
+  font-size: clamp(1.22rem, 1.5vw, 1.42rem);
+  line-height: 1.65;
+}
+
+.details p {
+  margin: 0.4rem 0 0;
+  color: #c0cec4;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+@media (max-width: 68rem) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 40rem) {
+  .container {
+    width: min(100% - 2rem, 82rem);
+    padding: 3.5rem 0 4.5rem;
+  }
+
+  .heading {
+    margin-bottom: 2.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    max-width: 21rem;
+    margin: 0 auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .bookImage,
+  .halo {
+    transition: none;
+  }
+
+  .card:hover,
+  .card:hover .bookImage {
+    transform: none;
+  }
+}

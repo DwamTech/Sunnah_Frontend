@@ -1,0 +1,436 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  min-height: clamp(27rem, 50vh, 34rem);
+  overflow: hidden;
+  direction: rtl;
+  background:
+    radial-gradient(circle at 18% 55%, rgb(104 205 129 / 15%), transparent 25rem),
+    linear-gradient(90deg, #06110a 0%, #0a1f12 52%, #0b2516 100%);
+  color: #fff;
+  border-top: 1px solid rgb(177 239 192 / 45%);
+  box-shadow: none;
+}
+
+.hero::before {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 0.35rem;
+  background: linear-gradient(
+    90deg,
+    rgb(104 205 129 / 5%),
+    rgb(209 246 218 / 68%) 50%,
+    rgb(104 205 129 / 5%)
+  );
+  content: "";
+  pointer-events: none;
+}
+
+.visual {
+  position: absolute;
+  z-index: -4;
+  top: 50%;
+  left: clamp(1rem, 4vw, 5rem);
+  width: min(43vw, 30rem);
+  aspect-ratio: 1;
+  overflow: visible;
+  perspective: 60rem;
+  transform: translateY(-50%);
+  transform-style: preserve-3d;
+}
+
+.imageFrame {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  will-change: transform;
+  animation: globeFloat 7s ease-in-out infinite;
+  -webkit-mask-image:
+    linear-gradient(to right, transparent, #000 12%, #000 88%, transparent),
+    linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent, #000 12%, #000 88%, transparent),
+    linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent);
+  mask-composite: intersect;
+}
+
+.background {
+  object-fit: cover;
+  object-position: left center;
+  filter: saturate(1.08) contrast(0.97) brightness(1.16);
+  transform: scale(1.06);
+}
+
+.orbit {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: 88%;
+  height: 38%;
+  border: 1px solid rgb(213 168 77 / 62%);
+  border-radius: 50%;
+  box-shadow: none;
+  transform-style: preserve-3d;
+  pointer-events: none;
+}
+
+.orbit::after {
+  position: absolute;
+  top: -0.27rem;
+  left: 50%;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #e7bd65;
+  box-shadow: none;
+  content: "";
+}
+
+.orbitOne {
+  animation: orbitOne 9s linear infinite;
+}
+
+.orbitTwo {
+  width: 82%;
+  height: 44%;
+  border-color: rgb(104 205 129 / 55%);
+  animation: orbitTwo 12s linear infinite reverse;
+}
+
+.orbitThree {
+  width: 94%;
+  height: 31%;
+  border-color: rgb(213 168 77 / 42%);
+  animation: orbitThree 15s linear infinite;
+}
+
+.overlay {
+  position: absolute;
+  z-index: -3;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgb(3 8 5 / 0%) 0%,
+      rgb(7 20 12 / 3%) 28%,
+      rgb(10 31 18 / 22%) 58%,
+      rgb(7 22 13 / 58%) 100%
+    ),
+    radial-gradient(circle at 50% 50%, transparent 20%, rgb(7 18 11 / 24%) 100%);
+}
+
+.pattern {
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  right: 0;
+  width: min(45rem, 58vw);
+  height: 100%;
+  opacity: 0.12;
+  background-image:
+    linear-gradient(30deg, var(--brand-primary) 1px, transparent 1px),
+    linear-gradient(150deg, var(--brand-primary) 1px, transparent 1px);
+  background-size: 4.5rem 7.8rem;
+  mask-image: linear-gradient(to left, #000, transparent);
+}
+
+.container {
+  display: flex;
+  width: min(100% - 3rem, 84rem);
+  min-height: inherit;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 auto;
+}
+
+.content {
+  width: min(100%, 37rem);
+  padding: 2.5rem 0;
+  text-align: right;
+  animation: contentEnter 800ms 150ms ease-out both;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.9rem;
+  color: #86dc9a;
+  font-size: clamp(0.95rem, 1.15vw, 1.08rem);
+  font-weight: 850;
+}
+
+.eyebrow > span {
+  width: 2.4rem;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--brand-primary);
+  box-shadow: none;
+}
+
+.content h1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.12em;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.75rem, 3.1vw, 3.2rem);
+  font-weight: 850;
+  line-height: 1.22;
+  text-wrap: balance;
+}
+
+.content h1 strong {
+  font-size: 1.08em;
+  font-weight: inherit;
+}
+
+.titleLine {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.25em;
+  white-space: nowrap;
+}
+
+.content h1 strong,
+.content h1 .goldTitle {
+  color: var(--brand-gold);
+  background: var(--brand-gold-gradient);
+  background-size: 220% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0.2rem 0.45rem rgb(215 166 60 / 24%));
+  animation: goldShimmer 4.5s ease-in-out infinite;
+}
+
+.content > p {
+  max-width: 39rem;
+  margin: 1.1rem 0 0;
+  padding: 0.7rem 0.9rem;
+  border-right: 2px solid var(--brand-primary);
+  border-radius: 0.5rem;
+  background: rgb(3 10 6 / 24%);
+  color: #f0f7f2;
+  font-size: clamp(1.05rem, 1.25vw, 1.2rem);
+  font-weight: 650;
+  line-height: 2.05;
+  text-shadow: none;
+  backdrop-filter: blur(3px);
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 0.85rem;
+  margin-top: 1.35rem;
+}
+
+.feature {
+  display: flex;
+  min-width: 10.6rem;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid rgb(104 205 129 / 18%);
+  border-radius: 1rem;
+  background: rgb(31 66 42 / 56%);
+  box-shadow: none;
+  backdrop-filter: blur(8px);
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.feature:hover {
+  border-color: rgb(104 205 129 / 42%);
+  background: rgb(42 84 53 / 76%);
+  transform: translateY(-0.25rem);
+}
+
+.icon {
+  display: grid;
+  width: 1.8rem;
+  height: 1.8rem;
+  place-items: center;
+  flex: 0 0 auto;
+  border-radius: 0.8rem;
+  background: rgb(104 205 129 / 13%);
+  color: var(--brand-primary);
+}
+
+.icon svg {
+  width: 0.95rem;
+  height: 0.95rem;
+}
+
+.feature div {
+  display: grid;
+  gap: 0.1rem;
+}
+
+.feature strong {
+  color: #fff;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.feature div span {
+  color: #bdcbc1;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.bottomFade {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 5rem;
+  background: linear-gradient(to top, rgb(5 10 7 / 60%), transparent);
+  pointer-events: none;
+}
+
+@keyframes contentEnter {
+  from {
+    opacity: 0;
+    transform: translateX(2rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes globeFloat {
+  0%,
+  100% {
+    transform: translate3d(0, 0.2rem, 0) rotateX(1deg) rotateY(-2deg)
+      scale(0.99);
+  }
+
+  50% {
+    transform: translate3d(0, -0.55rem, 1.2rem) rotateX(-1deg) rotateY(3deg)
+      scale(1.015);
+  }
+}
+
+@keyframes goldShimmer {
+  0%,
+  100% {
+    background-position: 100% center;
+  }
+
+  50% {
+    background-position: 0 center;
+  }
+}
+
+@keyframes orbitOne {
+  from {
+    transform: translate(-50%, -50%) rotateX(68deg) rotateZ(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotateX(68deg) rotateZ(360deg);
+  }
+}
+
+@keyframes orbitTwo {
+  from {
+    transform: translate(-50%, -50%) rotateY(70deg) rotateZ(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotateY(70deg) rotateZ(360deg);
+  }
+}
+
+@keyframes orbitThree {
+  from {
+    transform: translate(-50%, -50%) rotateX(55deg) rotateY(28deg) rotateZ(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotateX(55deg) rotateY(28deg) rotateZ(360deg);
+  }
+}
+
+@media (max-width: 48rem) {
+  .hero {
+    min-height: 31rem;
+  }
+
+  .container {
+    width: min(100% - 2rem, 84rem);
+  }
+
+  .content {
+    padding: 2.25rem 0;
+  }
+
+  .visual {
+    top: 50%;
+    left: 50%;
+    width: min(82vw, 28rem);
+    opacity: 0.72;
+    transform: translate(-50%, -50%);
+  }
+
+  .overlay {
+    background:
+      linear-gradient(90deg, rgb(4 10 7 / 22%), rgb(4 10 7 / 78%)),
+      linear-gradient(180deg, rgb(4 9 6 / 8%), rgb(4 9 6 / 34%));
+  }
+
+  .pattern {
+    width: 100%;
+  }
+
+  .content h1 {
+    font-size: clamp(1.65rem, 7vw, 2.45rem);
+  }
+}
+
+@media (max-width: 30rem) {
+  .feature {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .content {
+    animation: none;
+  }
+
+  .imageFrame {
+    animation: none;
+  }
+
+  .goldTitle {
+    animation: none;
+  }
+
+  .orbit {
+    animation: none;
+  }
+
+  .feature {
+    transition: none;
+  }
+}

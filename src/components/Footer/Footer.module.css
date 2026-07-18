@@ -1,0 +1,472 @@
+.footer {
+  position: relative;
+  flex-shrink: 0;
+  margin-top: auto;
+  overflow: hidden;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 46rem;
+  direction: rtl;
+  border-top: 1px solid rgb(104 205 129 / 20%);
+  background:
+    radial-gradient(circle at 12% 120%, rgb(104 205 129 / 18%), transparent 28rem),
+    radial-gradient(circle at 92% -30%, rgb(55 141 78 / 16%), transparent 24rem),
+    linear-gradient(115deg, #030504 0%, #0c1811 52%, #14301e 100%);
+  color: #d7e3da;
+}
+
+.glow {
+  position: absolute;
+  top: -7rem;
+  left: 50%;
+  width: 32rem;
+  height: 14rem;
+  border-radius: 50%;
+  background: rgb(104 205 129 / 7%);
+  filter: blur(4rem);
+  transform: translateX(-50%);
+  pointer-events: none;
+  animation: glowPulse 5s ease-in-out infinite;
+}
+
+.container {
+  position: relative;
+  width: min(100% - 3rem, 84rem);
+  margin: 0 auto;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1.45fr 0.75fr 0.8fr 1fr;
+  gap: clamp(2rem, 4vw, 4.5rem);
+  padding: 8rem 0 6rem;
+}
+
+.identity {
+  max-width: 28rem;
+  margin-top: -2rem;
+}
+
+.content > section {
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.content > section:hover {
+  transform: translateY(-0.35rem);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.logo {
+  width: 12.75rem;
+  height: 12.75rem;
+  flex: 0 0 auto;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 0.6rem 0.8rem rgb(0 0 0 / 35%))
+    drop-shadow(0 0 0.6rem rgb(104 205 129 / 12%));
+  animation: footerLogoFloat 4.5s ease-in-out infinite;
+}
+
+.brand h2 {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(1.25rem, 1.55vw, 1.55rem);
+  line-height: 1.5;
+  transition: color 180ms ease;
+}
+
+.brand > div {
+  text-align: center;
+}
+
+.tagline {
+  display: grid;
+  justify-items: center;
+  gap: 0.15rem;
+  margin-top: 0.3rem;
+}
+
+.tagline span {
+  color: var(--brand-gold);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.identity p {
+  margin: 0;
+  color: #aebdb3;
+  font-size: 1.08rem;
+  line-height: 2.2;
+  text-align: center;
+  transition: color 180ms ease;
+}
+
+.identity:hover h2,
+.identity:hover p {
+  color: #fff;
+}
+
+.column h3,
+.messageLabel {
+  position: relative;
+  display: inline-block;
+  margin: 0 0 1.15rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.column h3::after,
+.messageLabel::after {
+  position: absolute;
+  right: 0;
+  bottom: -0.55rem;
+  width: 2rem;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--brand-primary);
+  content: "";
+}
+
+.column ul {
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.column li {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: #aebdb3;
+  font-size: 1.03rem;
+  font-weight: 600;
+  line-height: 1.7;
+  transition:
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.column li:hover {
+  color: #fff;
+  transform: translateX(-0.35rem);
+}
+
+.column li svg {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+  color: var(--brand-primary);
+  transition:
+    filter 160ms ease,
+    transform 160ms ease;
+}
+
+.column li:hover svg {
+  filter: drop-shadow(0 0 0.35rem rgb(104 205 129 / 65%));
+  transform: scale(1.14);
+}
+
+.messageGroup {
+  display: grid;
+  align-self: start;
+  gap: 1rem;
+}
+
+.message {
+  align-self: start;
+  padding: 1.1rem;
+  border: 1px solid rgb(104 205 129 / 16%);
+  border-radius: 1rem;
+  background: rgb(255 255 255 / 4%);
+}
+
+.message:hover {
+  border-color: rgb(104 205 129 / 38%);
+  background: rgb(104 205 129 / 7%);
+  box-shadow: 0 0.9rem 2rem rgb(0 0 0 / 16%);
+}
+
+.vision {
+  border-color: rgb(215 166 60 / 20%);
+  background:
+    linear-gradient(135deg, rgb(215 166 60 / 7%), transparent),
+    rgb(255 255 255 / 4%);
+}
+
+.vision:hover {
+  border-color: rgb(215 166 60 / 42%);
+  background:
+    linear-gradient(135deg, rgb(215 166 60 / 11%), transparent),
+    rgb(255 255 255 / 5%);
+}
+
+.vision .messageLabel,
+.vision .messageLabel svg {
+  color: var(--brand-gold);
+}
+
+.vision .messageLabel::after {
+  background: var(--brand-gold-deep);
+}
+
+.message blockquote {
+  margin: 0;
+  color: #bdcbc1;
+  font-size: 1.03rem;
+  line-height: 2.1;
+}
+
+.messageLabel svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-left: 0.4rem;
+  color: var(--brand-gold);
+  vertical-align: -0.2rem;
+}
+
+.bottomBar {
+  display: flex;
+  min-height: 9rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  border-top: 1px solid rgb(255 255 255 / 9%);
+  text-align: center;
+}
+
+.legalLinks {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.bottomBar .legalLinks a {
+  padding: 0.38rem 0.8rem;
+  border: 1px solid rgb(104 205 129 / 16%);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 4%);
+  color: #c3d0c6;
+  font-size: 0.88rem;
+  font-weight: 750;
+  transition:
+    border-color 170ms ease,
+    background 170ms ease,
+    color 170ms ease,
+    transform 170ms ease;
+}
+
+.bottomBar .legalLinks a:hover {
+  border-color: rgb(215 166 60 / 36%);
+  background: rgb(215 166 60 / 8%);
+  color: var(--brand-gold);
+  transform: translateY(-0.15rem);
+}
+
+.bottomBar .legalLinks a::after {
+  display: none;
+}
+
+.legalLinks > span {
+  color: var(--brand-gold-deep);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.bottomBar p {
+  margin: 0;
+  color: #849389;
+  font-size: 0.95rem;
+  line-height: 2;
+  transition: color 160ms ease;
+}
+
+.bottomBar p:hover {
+  color: #dce7df;
+}
+
+.bottomBar a {
+  position: relative;
+  color: var(--brand-primary);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.credit,
+.credit a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.dwamLogo {
+  width: 2.25rem;
+  height: 2.25rem;
+  object-fit: contain;
+  filter: drop-shadow(0 0.35rem 0.5rem rgb(0 0 0 / 22%));
+  transition:
+    filter 180ms ease,
+    transform 180ms ease;
+}
+
+.credit a::after {
+  display: none;
+}
+
+.credit a:hover .dwamLogo {
+  filter:
+    drop-shadow(0 0.4rem 0.55rem rgb(0 0 0 / 28%))
+    drop-shadow(0 0 0.45rem rgb(255 153 20 / 28%));
+  transform: translateY(-0.2rem) scale(1.06);
+}
+
+.bottomBar a::after {
+  position: absolute;
+  right: 0;
+  bottom: -0.22rem;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  content: "";
+  transition: width 180ms ease;
+}
+
+.bottomBar a:hover::after {
+  width: 100%;
+}
+
+.divider {
+  margin: 0 0.55rem;
+  color: rgb(104 205 129 / 45%);
+}
+
+.bottomBar .signature {
+  color: var(--brand-gold);
+  font-weight: 700;
+}
+
+@keyframes footerLogoFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-0.35rem);
+  }
+}
+
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: translateX(-50%) scale(0.95);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.08);
+  }
+}
+
+@media (max-width: 64rem) {
+  .content {
+    grid-template-columns: 1.4fr 1fr 1fr;
+  }
+
+  .message {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 44rem) {
+  .container {
+    width: min(100% - 2rem, 84rem);
+  }
+
+  .content {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem 1.5rem;
+    padding: 4rem 0 3rem;
+  }
+
+  .identity,
+  .messageGroup {
+    grid-column: 1 / -1;
+  }
+
+  .identity {
+    margin-top: 0;
+  }
+
+  .bottomBar {
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.25rem 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 28rem) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .identity,
+  .messageGroup {
+    grid-column: auto;
+  }
+
+  .brand {
+    align-items: center;
+  }
+
+  .logo {
+    width: 9rem;
+    height: 9rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glow,
+  .logo {
+    animation: none;
+  }
+
+  .bottomBar a::after {
+    transition: none;
+  }
+
+  .bottomBar .legalLinks a {
+    transition: none;
+  }
+
+  .content > section,
+  .column li,
+  .column li svg,
+  .bottomBar p {
+    transition: none;
+  }
+
+  .content > section:hover,
+  .column li:hover,
+  .column li:hover svg,
+  .bottomBar .legalLinks a:hover {
+    transform: none;
+  }
+}
