@@ -1,41 +1,8 @@
 import Image from "next/image";
 import { FiBookOpen, FiLayers } from "react-icons/fi";
-import cooperationBook from "../../../puplic/Group-29-360x504.png";
-import terminologyBook from "../../../puplic/Group-20-360x504.png";
-import preservationBook from "../../../puplic/Group-28-360x504.png";
-import mahdiBook from "../../../puplic/Group-36-360x504.png";
+import publications from "../../data/publications.json";
+import { publicationImages } from "../PublicationsPage/publicationAssets";
 import styles from "./PublicationsSection.module.css";
-
-const publications = [
-  {
-    title: "تعاونوا نتفق",
-    description: "قيم التعاون والتآلف في ضوء السنة النبوية",
-    image: cooperationBook,
-    tone: "emerald",
-    number: "01",
-  },
-  {
-    title: "المصطلحات الوافدة",
-    description: "وأثرها على الهوية الإسلامية",
-    image: terminologyBook,
-    tone: "amber",
-    number: "02",
-  },
-  {
-    title: "وإنّا له لحافظون",
-    description: "دراسات في حفظ الوحي والسنة",
-    image: preservationBook,
-    tone: "mint",
-    number: "03",
-  },
-  {
-    title: "المهدي المنتظر",
-    description: "الرجعة والشفاعة في ميزان العلم",
-    image: mahdiBook,
-    tone: "rose",
-    number: "04",
-  },
-];
 
 export default function PublicationsSection() {
   return (
@@ -67,7 +34,7 @@ export default function PublicationsSection() {
                 <span className={styles.halo} aria-hidden="true" />
                 <Image
                   className={styles.bookImage}
-                  src={publication.image}
+                  src={publicationImages[publication.image]}
                   alt={`غلاف كتاب ${publication.title}`}
                   loading="lazy"
                   decoding="async"

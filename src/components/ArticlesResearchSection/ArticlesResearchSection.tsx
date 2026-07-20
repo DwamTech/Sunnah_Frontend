@@ -4,28 +4,11 @@ import {
   FiClock,
   FiFeather,
 } from "react-icons/fi";
+import researchItems from "../../data/research.json";
 import styles from "./ArticlesResearchSection.module.css";
 
-const articles = [
-  {
-    number: "01",
-    type: "بحث علمي",
-    title: "منهج التثبّت في نقل الحديث النبوي وأثره في بناء المعرفة",
-    time: "12 دقيقة",
-  },
-  {
-    number: "02",
-    type: "مقال فكري",
-    title: "قيم التعايش الإنساني في ضوء الهدي النبوي",
-    time: "8 دقائق",
-  },
-  {
-    number: "03",
-    type: "دراسة معاصرة",
-    title: "السنة النبوية وصناعة الوعي في المجتمعات الحديثة",
-    time: "10 دقائق",
-  },
-];
+const featuredResearch = researchItems[0];
+const articles = researchItems.slice(1, 4);
 
 export default function ArticlesResearchSection() {
   return (
@@ -65,16 +48,15 @@ export default function ArticlesResearchSection() {
             </span>
 
             <div className={styles.featuredContent}>
-              <span className={styles.issue}>الإصدار المعرفي • 01</span>
-              <h3>مقاصد السنة النبوية وأثرها في بناء الإنسان</h3>
-              <p>
-                قراءة تأصيلية في القيم الكبرى التي أرساها الهدي النبوي،
-                وكيف تسهم في بناء شخصية متوازنة ومجتمع أكثر وعيًا ورحمة.
-              </p>
+              <span className={styles.issue}>
+                الإصدار المعرفي • {featuredResearch.number}
+              </span>
+              <h3>{featuredResearch.title}</h3>
+              <p>{featuredResearch.excerpt}</p>
               <div className={styles.meta}>
                 <span>
                   <FiClock aria-hidden="true" />
-                  15 دقيقة قراءة
+                  {featuredResearch.time} قراءة
                 </span>
                 <span className={styles.decorativeArrow}>
                   استكشف الفكرة
@@ -89,7 +71,7 @@ export default function ArticlesResearchSection() {
               <article className={styles.articleCard} key={article.number}>
                 <span className={styles.number}>{article.number}</span>
                 <div className={styles.articleContent}>
-                  <span className={styles.type}>{article.type}</span>
+                  <span className={styles.type}>{article.typeLabel}</span>
                   <h3>{article.title}</h3>
                   <span className={styles.readingTime}>
                     <FiClock aria-hidden="true" />

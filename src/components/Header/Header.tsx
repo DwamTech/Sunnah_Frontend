@@ -1,7 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
+import type { IconType } from "react-icons";
 import {
   FiBookOpen,
   FiChevronDown,
@@ -17,33 +20,56 @@ import {
 import logo from "../../../puplic/الهيئة_العالمية_للسنة_النبوية__1_-removebg-preview.png";
 import styles from "./Header.module.css";
 
-const navigation = [
-  { label: "الرئيسية", id: "home", icon: FiHome },
-  { label: "التعريف بالهيئة", id: "about", icon: FiInfo },
-  { label: "أخبار الهيئة", id: "news", icon: FiFileText },
-  { label: "كتب وإصدارات", id: "publications", icon: FiBookOpen },
-  { label: "مقالات وبحوث", id: "research", icon: FiSearch },
-  { label: "مرئيات", id: "media", icon: FiPlayCircle },
+type NavigationChild = {
+  label: string;
+  href?: string;
+};
+
+type NavigationItem = {
+  label: string;
+  id: string;
+  icon: IconType;
+  href?: string;
+  children?: NavigationChild[];
+};
+
+const navigation: NavigationItem[] = [
+  { label: "الرئيسية", id: "home", icon: FiHome, href: "/" },
+  { label: "التعريف بالهيئة", id: "about", icon: FiInfo, href: "/about" },
+  { label: "أخبار الهيئة", id: "news", icon: FiFileText, href: "/news" },
+  {
+    label: "كتب وإصدارات",
+    id: "publications",
+    icon: FiBookOpen,
+    href: "/publications",
+  },
+  {
+    label: "مقالات وبحوث",
+    id: "research",
+    icon: FiSearch,
+    href: "/research",
+  },
+  { label: "مرئيات", id: "media", icon: FiPlayCircle, href: "/media" },
   {
     label: "المزيد",
     id: "more",
     icon: FiGrid,
     children: [
-      "المنظمات الأعضاء",
-      "ملفات وتقارير",
-      "بيانات صادرة",
-      "إعلامية الهيئة",
-      "قنوات فضائية",
-      "إذاعات راديو",
-      "مجلات ودوريات",
-      "مواقع إلكترونية",
-      "تواصل اجتماعي",
+      { label: "المنظمات الأعضاء", href: "/member-organizations" },
+      { label: "ملفات وتقارير" },
+      { label: "بيانات صادرة", href: "/statements" },
+      { label: "قنوات فضائية", href: "/authority-media/satellite-channels" },
+      { label: "إذاعات راديو", href: "/authority-media/radio-stations" },
+      { label: "مجلات ودوريات", href: "/authority-media/journals" },
+      { label: "مواقع إلكترونية", href: "/authority-media/websites" },
+      { label: "تواصل اجتماعي", href: "/authority-media/social-media" },
     ],
   },
 ];
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className={styles.header}>
@@ -70,34 +96,73 @@ export default function Header() {
             }`}
             aria-label="التنقل الرئيسي"
           >
-            {navigation.map((item, index) => {
+            {navigation.map((item) => {
               const Icon = item.icon;
+              const isActive =
+                item.href === "/"
+                  ? pathname === "/"
+                  : item.href
+                    ? pathname.startsWith(item.href)
+                    : item.children?.some(
+                        (child) =>
+                          child.href && pathname.startsWith(child.href),
+                      ) ?? false;
 
               return (
                 <div className={styles.navigationItem} key={item.id}>
-                  <button
-                    type="button"
-                    className={index === 0 ? styles.active : undefined}
-                    onClick={() => {
-                      if (!item.children) {
-                        setIsMenuOpen(false);
-                      }
-                    }}
-                  >
-                    <Icon className={styles.navIcon} aria-hidden="true" />
-                    <span>{item.label}</span>
-                    {item.children ? (
-                      <FiChevronDown className={styles.chevron} aria-hidden="true" />
-                    ) : null}
-                  </button>
+                  {item.href ? (
+                    <Link
+                      href={item.href}
+                      className={`${styles.navControl} ${
+                        isActive ? styles.active : ""
+                      }`}
+                      aria-current={isActive ? "page" : undefined}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <Icon className={styles.navIcon} aria-hidden="true" />
+                      <span>{item.label}</span>
+                    </Link>
+                  ) : (
+                    <button
+                      type="button"
+                      className={`${styles.navControl} ${
+                        isActive ? styles.active : ""
+                      }`}
+                      onClick={() => {
+                        if (!item.children) {
+                          setIsMenuOpen(false);
+                        }
+                      }}
+                    >
+                      <Icon className={styles.navIcon} aria-hidden="true" />
+                      <span>{item.label}</span>
+                      {item.children ? (
+                        <FiChevronDown
+                          className={styles.chevron}
+                          aria-hidden="true"
+                        />
+                      ) : null}
+                    </button>
+                  )}
 
                   {item.children ? (
                     <div className={styles.dropdown}>
                       {item.children.map((child) => (
-                        <button type="button" key={child}>
-                          <span className={styles.dropdownDot} />
-                          {child}
-                        </button>
+                        child.href ? (
+                          <Link
+                            href={child.href}
+                            onClick={() => setIsMenuOpen(false)}
+                            key={child.label}
+                          >
+                            <span className={styles.dropdownDot} />
+                            {child.label}
+                          </Link>
+                        ) : (
+                          <button type="button" key={child.label}>
+                            <span className={styles.dropdownDot} />
+                            {child.label}
+                          </button>
+                        )
                       ))}
                     </div>
                   ) : null}

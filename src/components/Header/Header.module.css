@@ -120,7 +120,7 @@
   align-items: center;
 }
 
-.navigationItem > button {
+.navControl {
   position: relative;
   display: inline-flex;
   min-height: 2.8rem;
@@ -135,6 +135,7 @@
   font-family: inherit;
   font-size: clamp(0.84rem, 0.92vw, 0.97rem);
   font-weight: 750;
+  text-decoration: none;
   white-space: nowrap;
   transition:
     background 170ms ease,
@@ -143,7 +144,7 @@
     transform 170ms ease;
 }
 
-.navigationItem > button::after {
+.navControl::after {
   position: absolute;
   right: 50%;
   bottom: 0.22rem;
@@ -169,18 +170,18 @@
   transition: transform 170ms ease;
 }
 
-.navigationItem > button:hover,
+.navControl:hover,
 .navigationItem > .active,
-.navigationItem:focus-within > button {
+.navigationItem:focus-within > .navControl {
   border-color: rgb(104 205 129 / 18%);
   background: rgb(255 255 255 / 6%);
   color: #fff;
   transform: translateY(-1px);
 }
 
-.navigationItem > button:hover::after,
+.navControl:hover::after,
 .navigationItem > .active::after,
-.navigationItem:focus-within > button::after {
+.navigationItem:focus-within > .navControl::after {
   width: 1.6rem;
 }
 
@@ -232,7 +233,8 @@
   transform: rotate(45deg);
 }
 
-.dropdown button {
+.dropdown button,
+.dropdown a {
   display: flex;
   width: 100%;
   align-items: center;
@@ -246,6 +248,7 @@
   font-family: inherit;
   font-size: 0.83rem;
   font-weight: 700;
+  text-decoration: none;
   text-align: right;
   transition:
     background 150ms ease,
@@ -254,7 +257,9 @@
 }
 
 .dropdown button:hover,
-.dropdown button:focus-visible {
+.dropdown button:focus-visible,
+.dropdown a:hover,
+.dropdown a:focus-visible {
   outline: none;
   background: rgb(104 205 129 / 10%);
   color: #fff;
@@ -270,8 +275,8 @@
   box-shadow: 0 0 0 0.2rem rgb(104 205 129 / 9%);
 }
 
-.dropdown button:nth-child(4n + 1) .dropdownDot,
-.dropdown button:nth-child(4n + 4) .dropdownDot {
+.dropdown > :nth-child(4n + 1) .dropdownDot,
+.dropdown > :nth-child(4n + 4) .dropdownDot {
   background: var(--brand-gold-deep);
   box-shadow: 0 0 0 0.2rem rgb(215 166 60 / 8%);
 }
@@ -330,7 +335,7 @@
     display: none;
   }
 
-  .navigationItem > button {
+  .navControl {
     padding-inline: 0.48rem;
     font-size: 0.86rem;
   }
@@ -371,11 +376,11 @@
   }
 
   .navigationItem,
-  .navigationItem > button {
+  .navControl {
     width: 100%;
   }
 
-  .navigationItem > button {
+  .navControl {
     justify-content: flex-start;
   }
 
@@ -444,9 +449,10 @@
   }
 
   .navigation,
-  .navigationItem > button,
+  .navControl,
   .dropdown,
   .dropdown button,
+  .dropdown a,
   .chevron,
   .menuButton {
     transition: none;
