@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FiArrowDown, FiCalendar, FiGlobe } from "react-icons/fi";
+import { FiCalendar } from "react-icons/fi";
 import logo from "../../../puplic/الهيئة_العالمية_للسنة_النبوية__1_-removebg-preview.png";
 import newsItems from "../../data/news.json";
 import { newsImages } from "./newsAssets";
@@ -23,22 +23,10 @@ export default function NewsHero() {
 
       <div className={styles.heroContainer}>
         <div className={styles.heroContent}>
-          <span className={styles.eyebrow}>
-            <FiGlobe aria-hidden="true" />
-            نافذة الهيئة إلى العالم
-          </span>
           <h1 id="news-page-title">
             أخبار
             <strong>الهيئة</strong>
           </h1>
-          <p>
-            تابع أحدث الأنشطة والمبادرات والبرامج العلمية والإعلامية التي
-            تصنع أثرًا معرفيًا في خدمة السنة النبوية.
-          </p>
-          <a className={styles.exploreButton} href="#news-archive">
-            تصفح آخر الأخبار
-            <FiArrowDown aria-hidden="true" />
-          </a>
         </div>
 
         <article className={styles.heroStory}>

@@ -54,8 +54,7 @@ export default function VisualGallery() {
   }, [selectedVisual]);
 
   const openVisual = (visual: VisualItem) => {
-    setSelectedVisual(visual);
-    setIsPlaying(false);
+    window.open(visual.href, "_blank", "noopener,noreferrer");
   };
 
   return (

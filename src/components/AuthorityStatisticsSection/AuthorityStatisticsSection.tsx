@@ -8,21 +8,18 @@ const statistics = [
   {
     value: 43,
     label: "الإصدارات",
-    description: "كتب ودراسات علمية",
     icon: FiBookOpen,
     tone: "gold",
   },
   {
     value: 22,
     label: "الإعلام",
-    description: "مواد وبرامج مرئية",
     icon: FiRadio,
     tone: "green",
   },
   {
     value: 29,
     label: "المنظمات",
-    description: "شركاء حول العالم",
     icon: FiUsers,
     tone: "mint",
   },
@@ -140,7 +137,6 @@ export default function AuthorityStatisticsSection() {
                 </div>
                 <strong>{counts[index]}</strong>
                 <h3>{statistic.label}</h3>
-                <p>{statistic.description}</p>
               </article>
             );
           })}

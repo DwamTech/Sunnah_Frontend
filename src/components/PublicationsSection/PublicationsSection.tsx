@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FiBookOpen, FiLayers } from "react-icons/fi";
+import { FiBookOpen } from "react-icons/fi";
 import publications from "../../data/publications.json";
 import { publicationImages } from "../PublicationsPage/publicationAssets";
 import styles from "./PublicationsSection.module.css";
@@ -16,20 +16,17 @@ export default function PublicationsSection() {
             المكتبة العلمية
           </span>
           <h2 id="publications-title">كتب وإصدارات</h2>
-          <p>
-            مجموعة مختارة من إصدارات الهيئة العلمية لخدمة السنة النبوية
-            ومعالجة القضايا الفكرية والمجتمعية.
-          </p>
         </header>
 
         <div className={styles.grid}>
-          {publications.map((publication) => (
-            <article
+          {publications.slice(0, 4).map((publication) => (
+            <a
               className={`${styles.card} ${styles[publication.tone]}`}
               key={publication.number}
+              href={publication.href}
+              target="_blank"
+              rel="noreferrer"
             >
-              <span className={styles.number}>{publication.number}</span>
-
               <div className={styles.visual}>
                 <span className={styles.halo} aria-hidden="true" />
                 <Image
@@ -43,14 +40,9 @@ export default function PublicationsSection() {
               </div>
 
               <div className={styles.details}>
-                <span className={styles.meta}>
-                  <FiLayers aria-hidden="true" />
-                  إصدار علمي
-                </span>
                 <h3>{publication.title}</h3>
-                <p>{publication.description}</p>
               </div>
-            </article>
+            </a>
           ))}
         </div>
       </div>

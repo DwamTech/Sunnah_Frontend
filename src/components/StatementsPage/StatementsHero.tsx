@@ -1,4 +1,4 @@
-import { FiArrowDown, FiCheck, FiFileText, FiShield } from "react-icons/fi";
+import { FiArrowDown, FiFileText, FiShield } from "react-icons/fi";
 import styles from "./StatementsPage.module.css";
 
 export default function StatementsHero() {
@@ -7,23 +7,10 @@ export default function StatementsHero() {
       <div className={styles.heroPattern} aria-hidden="true" />
       <div className={styles.heroContainer}>
         <div className={styles.heroContent}>
-          <span className={styles.eyebrow}>
-            <FiShield aria-hidden="true" />
-            صوت مؤسسي مسؤول
-          </span>
           <h1 id="statements-page-title">
             بيانات
             <strong>صادرة</strong>
           </h1>
-          <p>
-            المواقف والبيانات الرسمية الصادرة عن الهيئة، بصياغة واضحة
-            تستند إلى المرجعية العلمية وتراعي مسؤولية الكلمة وأثرها.
-          </p>
-          <div className={styles.heroFeatures}>
-            <span><FiCheck aria-hidden="true" /> موثقة</span>
-            <span><FiCheck aria-hidden="true" /> واضحة</span>
-            <span><FiCheck aria-hidden="true" /> مسؤولة</span>
-          </div>
         </div>
 
         <div className={styles.documentsVisual} aria-hidden="true">

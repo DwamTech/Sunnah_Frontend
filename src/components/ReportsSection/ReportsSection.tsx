@@ -1,43 +1,23 @@
 import Image from "next/image";
-import { FiArchive, FiCalendar, FiFileText } from "react-icons/fi";
 import reportsImage from "../../../puplic/isometric-stacked-binders-with-papers-vector-350x250.jpg";
 import styles from "./ReportsSection.module.css";
 
 const reports = [
-  {
-    title: "وثيقة علماء أفريقيا عربي",
-    type: "وثيقة علمية",
-    year: "2024",
-    tone: "emerald",
-    description:
-      "وثيقة معرفية تجمع الرؤى العلمية وتوثّق الجهود المشتركة في خدمة السنة النبوية.",
-  },
-  {
-    title: "وثيقة علماء أفريقيا إنجليزي",
-    type: "وثيقة مترجمة",
-    year: "2024",
-    tone: "gold",
-    description: "نسخة دولية تُتيح محتوى الوثيقة للباحثين والمهتمين حول العالم.",
-  },
-  {
-    title: "محركات السياسة الفارسية",
-    type: "ملف بحثي",
-    year: "2023",
-    tone: "forest",
-    description: "قراءة بحثية موثقة في المؤثرات الفكرية والسياسية المعاصرة.",
-  },
-  {
-    title: "تقرير الهيئة السنوي",
-    type: "تقرير مؤسسي",
-    year: "2012",
-    tone: "mint",
-    description: "عرض موجز لأبرز أعمال الهيئة وبرامجها ومبادراتها خلال العام.",
-  },
-];
+  ["وثيقة علماء افريقيا فرنسي", "https://wbpsunna.com/%d9%88%d8%ab%d9%8a%d9%82%d8%a9-%d8%b9%d9%84%d9%85%d8%a7%d8%a1-%d8%a7%d9%81%d8%b1%d9%8a%d9%82%d9%8a%d8%a7-%d9%81%d8%b1%d9%86%d8%b3%d9%8a/", "وثيقة فرنسي🔗"],
+  ["وثيقة علماء افريقيا عربي", "https://wbpsunna.com/%d9%88%d8%ab%d9%8a%d9%82%d8%a9-%d8%b9%d9%84%d9%85%d8%a7%d8%a1-%d8%a7%d9%81%d8%b1%d9%8a%d9%82%d9%8a%d8%a7-%d8%b9%d8%b1%d8%a8%d9%8a/", "وثيقة عربي🔗"],
+  ["وثيقة علماء افريقيا انجليزي", "https://wbpsunna.com/%d9%88%d8%ab%d9%8a%d9%82%d8%a9-%d8%b9%d9%84%d9%85%d8%a7%d8%a1-%d8%a7%d9%81%d8%b1%d9%8a%d9%82%d9%8a%d8%a7-%d8%a7%d9%86%d8%ac%d9%84%d9%8a%d8%b2%d9%8a/", "وثيقة انجليزي🔗"],
+  ["محركات السياسة الفارسية", "https://wbpsunna.com/%d9%85%d8%ad%d8%b1%d9%83%d8%a7%d8%aa-%d8%a7%d9%84%d8%b3%d9%8a%d8%a7%d8%b3%d8%a9-%d8%a7%d9%84%d9%81%d8%a7%d8%b1%d8%b3%d9%8a%d8%a9/", "محركات السياسة الفارسية 🔗"],
+  ["تقرير الهيئة لعام 2017", "https://wbpsunna.com/%d8%aa%d9%82%d8%b1%d9%8a%d8%b1-2017/", "تقرير 2017🔗"],
+  ["تقرير اعلامية الهيئة", "https://wbpsunna.com/%d8%a7%d8%b9%d9%84%d8%a7%d9%85%d9%8a%d8%a9-%d8%a7%d9%84%d9%87%d9%8a%d8%a6%d8%a9/", "اعلامية الهيئة🔗"],
+  ["تقرير الهيئة لعام 2019", "https://wbpsunna.com/%d8%aa%d9%82%d8%b1%d9%8a%d8%b1-2019/", "تقرير 2019🔗"],
+  ["تقرير الهيئة لعام 2016", "https://wbpsunna.com/%d8%aa%d9%82%d8%b1%d9%8a%d8%b1-2016/", "تقرير 2016🔗"],
+  ["التقرير التأسيسي للهيئة", "https://wbpsunna.com/%d8%a7%d9%84%d8%aa%d9%82%d8%b1%d9%8a%d8%b1-%d8%a7%d9%84%d8%aa%d8%a3%d8%b3%d9%8a%d8%b3%d9%8a/", "التقرير التأسيسي🔗"],
+  ["تقرير الهيئة لعام 2015", "https://wbpsunna.com/%d8%aa%d9%82%d8%b1%d9%8a%d8%b1-2015/", "تقرير 2015🔗"],
+].map(([title, href, description], index) => ({ title, href, description, tone: ["emerald", "gold", "forest", "mint"][index % 4] }));
 
 export default function ReportsSection() {
   return (
-    <section className={styles.section} aria-labelledby="reports-title">
+    <section id="reports" className={styles.section} aria-labelledby="reports-title">
       <div className={styles.waves} aria-hidden="true">
         <span />
         <span />
@@ -53,15 +33,7 @@ export default function ReportsSection() {
 
       <div className={styles.container}>
         <header className={styles.heading}>
-          <span className={styles.eyebrow}>
-            <FiArchive aria-hidden="true" />
-            الأرشيف المعرفي
-          </span>
           <h2 id="reports-title">ملفات وتقارير</h2>
-          <p>
-            وثائق وتقارير مختارة توثّق جهود الهيئة وتعرض رؤيتها العلمية
-            ومبادراتها المؤسسية.
-          </p>
         </header>
 
         <div className={styles.grid}>
@@ -72,10 +44,6 @@ export default function ReportsSection() {
               } ${index === reports.length - 1 ? styles.wide : ""}`}
               key={report.title}
             >
-              <span className={styles.index}>
-                {String(index + 1).padStart(2, "0")}
-              </span>
-
               <div className={styles.visual}>
                 <span className={styles.backPlate} aria-hidden="true" />
                 <Image
@@ -89,16 +57,9 @@ export default function ReportsSection() {
               </div>
 
               <div className={styles.content}>
-                <span className={styles.type}>
-                  <FiFileText aria-hidden="true" />
-                  {report.type}
-                </span>
-                <h3>{report.title}</h3>
+                <h3><a href={report.href} target="_blank" rel="noreferrer">{report.title}</a></h3>
+                <p>by <a href="https://wbpsunna.com/author/admin/" target="_blank" rel="noreferrer">admin</a> <a href={report.href} target="_blank" rel="noreferrer">28 أغسطس 2024</a> <a href={`${report.href}#comments`} target="_blank" rel="noreferrer">0</a></p>
                 <p>{report.description}</p>
-                <span className={styles.year}>
-                  <FiCalendar aria-hidden="true" />
-                  {report.year}
-                </span>
               </div>
             </article>
           ))}

@@ -75,6 +75,7 @@
 
 .heroContent {
   max-width: 43rem;
+  transform: translateY(-3rem);
 }
 
 .eyebrow,
@@ -579,6 +580,7 @@
   font-family: inherit;
   font-size: 0.86rem;
   font-weight: 900;
+  text-decoration: none;
 }
 
 .readMore svg {

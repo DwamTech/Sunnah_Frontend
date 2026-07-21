@@ -4,7 +4,6 @@ import Header from "../../components/Header/Header";
 import {
   StatementsArchive,
   StatementsHero,
-  StatementValues,
 } from "../../components/StatementsPage";
 
 export const metadata: Metadata = {
@@ -20,7 +19,6 @@ export default function StatementsPage() {
       <main>
         <StatementsHero />
         <StatementsArchive />
-        <StatementValues />
       </main>
       <Footer />
     </>

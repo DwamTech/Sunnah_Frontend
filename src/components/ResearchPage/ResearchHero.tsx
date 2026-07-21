@@ -1,9 +1,5 @@
 import {
-  FiArrowDown,
-  FiBookOpen,
-  FiEdit3,
   FiFeather,
-  FiSearch,
 } from "react-icons/fi";
 import styles from "./ResearchPage.module.css";
 
@@ -19,24 +15,10 @@ export default function ResearchHero() {
       <div className={styles.heroPattern} aria-hidden="true" />
       <div className={styles.heroContainer}>
         <div className={styles.heroContent}>
-          <span className={styles.eyebrow}>
-            <FiFeather aria-hidden="true" />
-            معرفة مؤصّلة ورؤية معاصرة
-          </span>
           <h1 id="research-page-title">
             مقالات
             <strong>وبحوث</strong>
           </h1>
-          <p>
-            مساحة معرفية تجمع البحث العلمي والفكر الرصين، وتقرأ قضايا
-            الإنسان والمجتمع في ضوء السنة النبوية ومقاصدها.
-          </p>
-
-          <div className={styles.heroFeatures}>
-            <span><FiBookOpen aria-hidden="true" /> بحوث موثقة</span>
-            <span><FiEdit3 aria-hidden="true" /> مقالات متخصصة</span>
-            <span><FiSearch aria-hidden="true" /> قراءة تحليلية</span>
-          </div>
         </div>
 
         <div className={styles.pagesVisual} aria-hidden="true">
@@ -58,10 +40,6 @@ export default function ResearchHero() {
         </div>
       </div>
 
-      <a className={styles.scrollHint} href="#research-library">
-        تصفح المركز المعرفي
-        <FiArrowDown aria-hidden="true" />
-      </a>
     </section>
   );
 }

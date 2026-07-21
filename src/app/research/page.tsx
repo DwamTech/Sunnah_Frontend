@@ -3,8 +3,7 @@ import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import {
   ResearchHero,
-  ResearchLibrary,
-  ResearchTopics,
+  ResearchEmpty,
 } from "../../components/ResearchPage";
 
 export const metadata: Metadata = {
@@ -19,8 +18,7 @@ export default function ResearchPage() {
       <Header />
       <main>
         <ResearchHero />
-        <ResearchLibrary />
-        <ResearchTopics />
+        <ResearchEmpty />
       </main>
       <Footer />
     </>

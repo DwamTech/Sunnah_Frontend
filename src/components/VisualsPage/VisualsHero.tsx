@@ -34,12 +34,7 @@ export default function VisualsHero() {
           </span>
           <h1 id="visuals-page-title">
             مرئيات
-            <strong>تلهم الوعي</strong>
           </h1>
-          <p>
-            تجربة مشاهدة معرفية تقدم هدي السنة النبوية وقيمها بصياغة
-            معاصرة، ومحتوى بصري موثوق يصل إلى الإنسان أينما كان.
-          </p>
           <div className={styles.heroMeta}>
             <span><FiFilm aria-hidden="true" /> {featuredVisual.categoryLabel}</span>
             <span><FiClock aria-hidden="true" /> {featuredVisual.duration}</span>

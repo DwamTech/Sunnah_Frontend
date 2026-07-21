@@ -45,7 +45,7 @@
 .imageFrame {
   position: absolute;
   inset: 0;
-  overflow: hidden;
+  overflow: visible;
   border-radius: 0;
   background: transparent;
   box-shadow: none;
@@ -53,21 +53,12 @@
   transform-origin: center;
   will-change: transform;
   animation: globeFloat 7s ease-in-out infinite;
-  -webkit-mask-image:
-    linear-gradient(to right, transparent, #000 12%, #000 88%, transparent),
-    linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent);
-  -webkit-mask-composite: source-in;
-  mask-image:
-    linear-gradient(to right, transparent, #000 12%, #000 88%, transparent),
-    linear-gradient(to bottom, transparent, #000 10%, #000 90%, transparent);
-  mask-composite: intersect;
 }
 
 .background {
-  object-fit: cover;
-  object-position: left center;
-  filter: saturate(1.08) contrast(0.97) brightness(1.16);
-  transform: scale(1.06);
+  object-fit: contain;
+  filter: drop-shadow(0 1.5rem 2.2rem rgb(0 0 0 / 35%));
+  transform: scale(0.86);
 }
 
 .orbit {

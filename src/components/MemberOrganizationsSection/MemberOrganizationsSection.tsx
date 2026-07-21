@@ -1,107 +1,40 @@
-import Image from "next/image";
-import {
-  FiBookOpen,
-  FiGlobe,
-  FiRadio,
-  FiUsers,
-} from "react-icons/fi";
-import authorityLogo from "../../../puplic/الهيئة_العالمية_للسنة_النبوية__1_-removebg-preview.png";
+"use client";
+
+import Image, { type StaticImageData } from "next/image";
+import { useEffect, useState } from "react";
+import logoOne from "../../../puplic/screen-0-1-300x300.jpg";
+import logoTwo from "../../../puplic/r1TO90eh_400x400-1-300x300.jpg";
+import logoThree from "../../../puplic/317728098_114554131486116_7715122729249262930_n-1-300x300.jpg";
+import logoFour from "../../../puplic/456330378_950616597107683_890519627821782829_n-1-300x300.jpg";
+import logoFive from "../../../puplic/2024-08-27-150020-1-300x226.png";
+import logoSix from "../../../puplic/لوجو-التنوير-300x208.jpg";
 import styles from "./MemberOrganizationsSection.module.css";
 
-const organizations = [
-  {
-    title: "المراكز العلمية",
-    description: "بحث وتأصيل",
-    icon: FiBookOpen,
-    position: "topRight",
-  },
-  {
-    title: "الجمعيات المتخصصة",
-    description: "تعاون وتكامل",
-    icon: FiUsers,
-    position: "bottomRight",
-  },
-  {
-    title: "المنصات المعرفية",
-    description: "محتوى وانتشار",
-    icon: FiGlobe,
-    position: "topLeft",
-  },
-  {
-    title: "المؤسسات الإعلامية",
-    description: "رسالة وتأثير",
-    icon: FiRadio,
-    position: "bottomLeft",
-  },
-];
+const organizations: StaticImageData[] = [logoOne, logoTwo, logoThree, logoFour, logoFive, logoSix];
 
 export default function MemberOrganizationsSection() {
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    const timer = window.setInterval(() => setActive((current) => (current + 1) % organizations.length), 3200);
+    return () => window.clearInterval(timer);
+  }, []);
+
+  const visibleOrganizations = Array.from({ length: 4 }, (_, index) => organizations[(active + index) % organizations.length]);
+
   return (
     <section className={styles.section} aria-labelledby="organizations-title">
-      <div className={styles.background} aria-hidden="true">
-        <span />
-        <span />
-      </div>
-
       <div className={styles.container}>
-        <header className={styles.heading}>
-          <span className={styles.eyebrow}>شراكات تصنع الأثر</span>
-          <h2 id="organizations-title">المنظمات الأعضاء</h2>
-          <p>
-            شبكة عالمية تجمع المؤسسات العلمية والمعرفية والإعلامية حول
-            رسالة مشتركة في خدمة السنة النبوية.
-          </p>
-        </header>
-
-        <div className={styles.network}>
-          <div className={styles.connections} aria-hidden="true">
-            <span />
-            <span />
-            <span />
-            <span />
-          </div>
-
-          <div className={styles.center}>
-            <span className={styles.centerRing} aria-hidden="true" />
-            <Image
-              className={styles.logo}
-              src={authorityLogo}
-              alt="شعار الهيئة العالمية للسنة النبوية"
-              loading="lazy"
-              decoding="async"
-            />
-            <strong>الهيئة العالمية</strong>
-            <span>مركز الشبكة</span>
-          </div>
-
-          {organizations.map((organization, index) => {
-            const Icon = organization.icon;
-
-            return (
-              <article
-                className={`${styles.organization} ${
-                  styles[organization.position]
-                }`}
-                key={organization.title}
-              >
-                <span className={styles.nodeNumber}>
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <span className={styles.organizationIcon}>
-                  <Icon aria-hidden="true" />
-                </span>
-                <div>
-                  <h3>{organization.title}</h3>
-                  <p>{organization.description}</p>
-                </div>
-              </article>
-            );
-          })}
+        <h2 id="organizations-title">المنظمات الأعضاء</h2>
+        <div className={styles.slider} aria-live="polite">
+          {visibleOrganizations.map((logo, index) => (
+            <div className={styles.logoCard} key={`${active}-${index}`}>
+              <Image src={logo} alt="شعار منظمة عضو" fill sizes="(max-width: 40rem) 38vw, 14rem" />
+            </div>
+          ))}
         </div>
-
-        <div className={styles.networkCaption}>
-          <FiGlobe aria-hidden="true" />
-          شبكة تنمو بالعلم والتعاون
+        <div className={styles.dots} aria-label="التنقل بين شعارات المنظمات">
+          {organizations.map((_, index) => <button className={index === active ? styles.activeDot : ""} type="button" aria-label={`عرض الشعار ${index + 1}`} onClick={() => setActive(index)} key={index} />)}
         </div>
       </div>
     </section>

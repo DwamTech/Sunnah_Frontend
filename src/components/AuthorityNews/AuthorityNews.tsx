@@ -1,31 +1,30 @@
 import Image from "next/image";
-import { FiBookOpen, FiCalendar, FiGlobe, FiPlayCircle } from "react-icons/fi";
-import newsImageOne from "../../../puplic/caption.jpg";
-import newsImageTwo from "../../../puplic/BPEdnTBCYAABNYm.jpg";
-import newsImageThree from "../../../puplic/2f3cdab01c9f854d96af086e7f14c25f.jpg";
+import graduationImageOne from "../../../puplic/صورة-واتساب-بتاريخ-2024-08-19-في-10.21.27_e71f96d0-350x250.jpg";
+import graduationImageTwo from "../../../puplic/354366-350x250.jpg";
+import outreachImage from "../../../puplic/465667-350x250.png";
+import televisionImage from "../../../puplic/صورة-واتساب-بتاريخ-2024-07-16-في-15.02.25_a562931e-350x250.jpg";
 import styles from "./AuthorityNews.module.css";
 
 const newsItems = [
   {
-    title: "جهود عالمية متواصلة في خدمة السنة النبوية وعلومها",
-    category: "أخبار الهيئة",
-    date: "أحدث الأخبار",
-    image: newsImageOne,
-    icon: FiGlobe,
+    title: "حفل تخريج الدفعة 19 من مجمع العربي الفرنسي للعلوم الإسلامية والغربية في غينيا كوناكري",
+    href: "https://wbpsunna.com/%d8%ad%d9%81%d9%84-%d8%aa%d8%ae%d8%b1%d9%8a%d8%ac-%d8%a7%d9%84%d8%af%d9%81%d8%b9%d8%a9-19-%d9%85%d9%86-%d9%85%d8%ac%d9%85%d8%b9-%d8%a7%d9%84%d8%b9%d8%b1%d8%a8%d9%8a-%d8%a7%d9%84%d9%81%d8%b1%d9%86/",
+    image: graduationImageOne,
   },
   {
-    title: "برامج علمية لتعزيز المعرفة بهدي النبي ﷺ",
-    category: "برامج علمية",
-    date: "أنشطة الهيئة",
-    image: newsImageTwo,
-    icon: FiBookOpen,
+    title: "حفل تخريج الدفعة الثانية من حفظة القرآن الكريم في مركز عمر بن الخطاب",
+    href: "https://wbpsunna.com/%d8%ad%d9%81%d9%84-%d8%aa%d8%ae%d8%b1%d9%8a%d8%ac-%d8%a7%d9%84%d8%af%d9%81%d8%b9%d8%a9-%d8%a7%d9%84%d8%ab%d8%a7%d9%86%d9%8a%d8%a9-%d9%85%d9%86-%d8%ad%d9%81%d8%b8%d8%a9-%d8%a7%d9%84%d9%82%d8%b1%d8%a2/",
+    image: graduationImageTwo,
   },
   {
-    title: "محتوى مرئي يقدّم قيم السنة بأسلوب معاصر",
-    category: "مرئيات",
-    date: "إعلامية الهيئة",
-    image: newsImageThree,
-    icon: FiPlayCircle,
+    title: "جولة دعوية لمواجهة المد الشيعي في ساحل العاج",
+    href: "https://wbpsunna.com/%d8%ac%d9%88%d9%84%d8%a9-%d8%af%d8%b9%d9%88%d9%8a%d8%a9-%d9%84%d9%85%d9%88%d8%a7%d8%ac%d9%87%d8%a9-%d8%a7%d9%84%d9%85%d8%af-%d8%a7%d9%84%d8%b4%d9%8a%d8%b9%d9%8a-%d9%81%d9%8a-%d8%b3%d8%a7%d8%ad%d9%84/",
+    image: outreachImage,
+  },
+  {
+    title: "أبو ناصر عبد الله يناقش في برنامج تلفزيوني بالسنغال أحكام عاشوراء وتصحيح المفاهيم الخاطئة",
+    href: "https://wbpsunna.com/%d8%a3%d8%a8%d9%88-%d9%86%d8%a7%d8%b5%d8%b1-%d8%b9%d8%a8%d8%af-%d8%a7%d9%84%d9%84%d9%87-%d9%8a%d9%86%d8%a7%d9%82%d8%b4-%d9%81%d9%8a-%d8%a8%d8%b1%d9%86%d8%a7%d9%85%d8%ac-%d8%aa%d9%84%d9%81%d8%b2%d9%8a/",
+    image: televisionImage,
   },
 ];
 
@@ -38,22 +37,18 @@ export default function AuthorityNews() {
 
       <div className={styles.container}>
         <header className={styles.heading}>
-          <span className={styles.eyebrow}>آخر المستجدات</span>
           <h2 id="news-title">أخبار الهيئة</h2>
-          <p>
-            تعرّف على أحدث أنشطة الهيئة ومبادراتها العلمية والإعلامية في
-            خدمة السنة النبوية.
-          </p>
         </header>
 
         <div className={styles.grid}>
           {newsItems.map((item, index) => {
-            const Icon = item.icon;
-
             return (
-              <article
+              <a
                 className={`${styles.card} ${index === 0 ? styles.featured : ""}`}
                 key={item.title}
+                href={item.href}
+                target="_blank"
+                rel="noreferrer"
               >
                 <div className={styles.imageWrapper}>
                   <Image
@@ -65,21 +60,13 @@ export default function AuthorityNews() {
                     decoding="async"
                     sizes="(max-width: 48rem) 100vw, 33vw"
                   />
-                  <span className={styles.category}>
-                    <Icon aria-hidden="true" />
-                    {item.category}
-                  </span>
                 </div>
 
                 <div className={styles.cardBody}>
-                  <span className={styles.date}>
-                    <FiCalendar aria-hidden="true" />
-                    {item.date}
-                  </span>
                   <h3>{item.title}</h3>
                   <span className={styles.cardLine} aria-hidden="true" />
                 </div>
-              </article>
+              </a>
             );
           })}
         </div>

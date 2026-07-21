@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { FiBookOpen, FiCheckCircle, FiGlobe } from "react-icons/fi";
-import heroImage from "../../../puplic/hero-3d.png";
+import authorityLogo from "../../../puplic/الهيئة_العالمية_للسنة_النبوية__1_-removebg-preview.png";
 import styles from "./Hero.module.css";
 
 export default function Hero() {
@@ -10,11 +9,11 @@ export default function Hero() {
         <div className={styles.imageFrame}>
           <Image
             className={styles.background}
-            src={heroImage}
-            alt=""
+            src={authorityLogo}
+            alt="شعار الهيئة العالمية للسنة النبوية"
             fill
             priority
-            sizes="(max-width: 48rem) 80vw, 42vw"
+            sizes="(max-width: 48rem) 80vw, 30rem"
           />
         </div>
         <span className={`${styles.orbit} ${styles.orbitOne}`} />
@@ -27,55 +26,18 @@ export default function Hero() {
 
       <div className={styles.container}>
         <div className={styles.content}>
-          <span className={styles.eyebrow}>
-            <span />
-            في رحاب السنة النبوية
-          </span>
-
           <h1 id="hero-title">
             <span className={styles.titleLine}>
-              <span className={styles.goldTitle}>معًا لخدمة</span>
-              <strong>السنة النبوية</strong>
+              <span className={styles.goldTitle}>الهيئة العالمية</span>
+              <strong>للسنة النبوية</strong>
             </span>
-            <span className={styles.goldTitle}>ونشر هديها للعالم</span>
           </h1>
 
           <p>
-            نُسهم في تقديم المعرفة الصحيحة بالسنة النبوية، ونشر قيمها
-            ومقاصدها بأسلوب علمي موثوق يصل إلى المجتمعات حول العالم.
+            هيئة إسلامية عالمية تنسيقية لدعم جهود الاعتصام بالكتاب والسنة
+            ونصرة الصحابة وأهل البيت ورد الشبهات المثارة حولهم.
           </p>
 
-          <div className={styles.features} aria-label="مميزات المنصة">
-            <div className={styles.feature}>
-              <span className={styles.icon}>
-                <FiBookOpen aria-hidden="true" />
-              </span>
-              <div>
-                <strong>محتوى علمي</strong>
-                <span>موثوق ومتخصص</span>
-              </div>
-            </div>
-
-            <div className={styles.feature}>
-              <span className={styles.icon}>
-                <FiGlobe aria-hidden="true" />
-              </span>
-              <div>
-                <strong>رسالة عالمية</strong>
-                <span>علم وهداية للجميع</span>
-              </div>
-            </div>
-
-            <div className={styles.feature}>
-              <span className={styles.icon}>
-                <FiCheckCircle aria-hidden="true" />
-              </span>
-              <div>
-                <strong>منهج علمي</strong>
-                <span>تأصيل ودقة ووضوح</span>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 

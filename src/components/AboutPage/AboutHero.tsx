@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FiArrowDown, FiGlobe, FiStar } from "react-icons/fi";
+import { FiStar } from "react-icons/fi";
 import logo from "../../../puplic/الهيئة_العالمية_للسنة_النبوية__1_-removebg-preview.png";
 import bookOne from "../../../puplic/Group-29-360x504.png";
 import bookTwo from "../../../puplic/Group-20-360x504.png";
@@ -16,24 +16,10 @@ export default function AboutHero() {
 
       <div className={styles.heroContainer}>
         <div className={styles.heroContent}>
-          <span className={styles.eyebrow}>
-            <FiGlobe aria-hidden="true" />
-            من نحن
-          </span>
           <h1 id="about-page-title">
-            الهيئة العالمية
+            هيئة العالمية
             <strong>للسنة النبوية</strong>
           </h1>
-          <p>
-            كيان عالمي يجمع العلم والتنسيق والعمل المؤسسي لخدمة السنة
-            النبوية، ونصرة ثوابت الأمة، وبناء أثر معرفي يصل إلى العالم.
-          </p>
-
-          <div className={styles.heroTags} aria-label="سمات الهيئة">
-            <span>عالمية</span>
-            <span>علمية</span>
-            <span>تنسيقية</span>
-          </div>
         </div>
 
         <div className={styles.knowledgeVisual} aria-hidden="true">
@@ -61,10 +47,6 @@ export default function AboutHero() {
         </div>
       </div>
 
-      <a className={styles.scrollHint} href="#about-introduction">
-        <FiArrowDown aria-hidden="true" />
-        اكتشف الهيئة
-      </a>
     </section>
   );
 }

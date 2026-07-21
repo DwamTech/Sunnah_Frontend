@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap");
+
 :root {
   color-scheme: light;
   --brand-primary: #68cd81;
@@ -40,7 +42,7 @@ body {
   min-height: 100vh;
   min-height: 100dvh;
   overflow-x: clip;
-  font-family: Arial, sans-serif;
+  font-family: "Cairo", Arial, sans-serif;
   background-color: #e9eceb;
   background-image:
     radial-gradient(circle at 10% 15%, rgb(104 205 129 / 16%), transparent 24rem),

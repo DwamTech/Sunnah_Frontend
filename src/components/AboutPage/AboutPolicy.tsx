@@ -9,13 +9,8 @@ export default function AboutPolicy() {
       <div className={styles.sectionContainer}>
         <header className={styles.policyHeading}>
           <div>
-            <span className={styles.sectionKicker}>منهج العمل</span>
             <h2 id="policy-title">سياستنا</h2>
           </div>
-          <p>
-            مبادئ تحكم حركتنا، وتحفظ رسالتنا، وتضمن أن يكون أثرنا مؤسسيًا
-            وواعيًا ومستدامًا.
-          </p>
         </header>
 
         <div className={styles.policyTimeline}>
@@ -32,7 +27,6 @@ export default function AboutPolicy() {
                 </span>
                 <div>
                   <h3>{policy.title}</h3>
-                  <p>{policy.description}</p>
                 </div>
               </article>
             );

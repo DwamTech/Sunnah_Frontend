@@ -1,46 +1,18 @@
 [
-  {
-    "title": "تعاونوا نتفق",
-    "description": "قيم التعاون والتآلف في ضوء السنة النبوية",
-    "summary": "قراءة علمية في قيمة التعاون وأثرها في بناء المجتمعات وتماسكها في ضوء الهدي النبوي.",
-    "category": "values",
-    "categoryLabel": "القيم النبوية",
-    "image": "cooperation",
-    "tone": "emerald",
-    "number": "01",
-    "year": "2022"
-  },
-  {
-    "title": "المصطلحات الوافدة",
-    "description": "وأثرها على الهوية الإسلامية",
-    "summary": "دراسة تحليلية للمفاهيم والمصطلحات المعاصرة وأثرها الفكري والاجتماعي على الهوية.",
-    "category": "identity",
-    "categoryLabel": "الهوية والفكر",
-    "image": "terminology",
-    "tone": "amber",
-    "number": "02",
-    "year": "2022"
-  },
-  {
-    "title": "وإنّا له لحافظون",
-    "description": "دراسات في حفظ الوحي والسنة",
-    "summary": "بحوث موثقة تستعرض صور العناية بالوحي وعلوم السنة وتجيب عن أبرز الشبهات المثارة.",
-    "category": "studies",
-    "categoryLabel": "دراسات السنة",
-    "image": "preservation",
-    "tone": "mint",
-    "number": "03",
-    "year": "2022"
-  },
-  {
-    "title": "المهدي المنتظر",
-    "description": "الرجعة والشفاعة في ميزان العلم",
-    "summary": "معالجة علمية تأصيلية لمجموعة من القضايا العقدية وفق منهج البحث والتحقيق والموازنة.",
-    "category": "studies",
-    "categoryLabel": "دراسات عقدية",
-    "image": "mahdi",
-    "tone": "rose",
-    "number": "04",
-    "year": "2022"
-  }
+  {"title":"مصر والشيعة بين صراع الماضي وخطر المستقبل","href":"https://wbpsunna.com/books/%d9%85%d8%b5%d8%b1-%d9%88%d8%a7%d9%84%d8%b4%d9%8a%d8%b9%d8%a9-%d8%a8%d9%8a%d9%86-%d8%b5%d8%b1%d8%a7%d8%b9-%d8%a7%d9%84%d9%85%d8%a7%d8%b6%d9%8a-%d9%88%d8%ae%d8%b7%d8%b1-%d8%a7%d9%84%d9%85%d8%b3%d8%aa/","image":"cooperation","tone":"emerald","number":"01","category":"books","categoryLabel":"","description":"","summary":"","year":""},
+  {"title":"كيف الموقف من المسلمين","href":"https://wbpsunna.com/books/%d9%83%d9%8a%d9%81-%d8%a7%d9%84%d9%85%d9%88%d9%82%d9%81-%d9%85%d9%86-%d8%a7%d9%84%d9%85%d8%b3%d9%84%d9%85%d9%8a%d9%86/","image":"terminology","tone":"amber","number":"02","category":"books","categoryLabel":"","description":"","summary":"","year":""},
+  {"title":"المصطلحات الوافدة وأثرها على الهوية الاسلامية","href":"https://wbpsunna.com/books/%d8%a7%d9%84%d9%85%d8%b5%d8%b7%d9%84%d8%ad%d8%a7%d8%aa-%d8%a7%d9%84%d9%88%d8%a7%d9%81%d8%af%d8%a9-%d9%88%d8%a3%d8%ab%d8%b1%d9%87%d8%a7-%d8%b9%d9%84%d9%89-%d8%a7%d9%84%d9%87%d9%88%d9%8a%d8%a9-%d8%a7/","image":"preservation","tone":"mint","number":"03","category":"books","categoryLabel":"","description":"","summary":"","year":""},
+  {"title":"المهدي المنتظر – الشفاعة – الرجعة","href":"https://wbpsunna.com/books/%d8%a7%d9%84%d9%85%d9%87%d8%af%d9%8a-%d8%a7%d9%84%d9%85%d9%86%d8%aa%d8%b8%d8%b1-%d8%a7%d9%84%d8%b4%d9%81%d8%a7%d8%b9%d8%a9-%d8%a7%d9%84%d8%b1%d8%ac%d8%b9%d8%a9/","image":"mahdi","tone":"rose","number":"04","category":"books","categoryLabel":"","description":"","summary":"","year":""},
+  {"title":"اصحاب المصطفى القائد والاتباع","href":"https://wbpsunna.com/books/%d8%a7%d8%b5%d8%ad%d8%a7%d8%a8-%d8%a7%d9%84%d9%85%d8%b5%d8%b7%d9%81%d9%89-%d8%a7%d9%84%d9%82%d8%a7%d8%a6%d8%af-%d9%88%d8%a7%d9%84%d8%a7%d8%aa%d8%a8%d8%a7%d8%b9/","image":"cooperation","tone":"emerald","number":"05","category":"books","categoryLabel":"","description":"","summary":"","year":""},
+  {"title":"جواهر الخطابة","href":"https://wbpsunna.com/books/%d8%ac%d9%88%d8%a7%d9%87%d8%b1-%d8%a7%d9%84%d8%ae%d8%b7%d8%a7%d8%a8%d8%a9/","image":"terminology","tone":"amber","number":"06","category":"books","categoryLabel":"","description":"","summary":"","year":""},
+  {"title":"الحسينيات","href":"https://wbpsunna.com/books/%d8%a7%d9%84%d8%ad%d8%b3%d9%8a%d9%86%d9%8a%d8%a7%d8%aa/","image":"preservation","tone":"mint","number":"07","category":"books","categoryLabel":"","description":"","summary":"","year":""},
+  {"title":"الاحتفالات الإسلامية","href":"https://wbpsunna.com/books/%d8%a7%d9%84%d8%a7%d8%ad%d8%aa%d9%81%d8%a7%d9%84%d8%a7%d8%aa-%d8%a7%d9%84%d8%a5%d8%b3%d9%84%d8%a7%d9%85%d9%8a%d8%a9/","image":"mahdi","tone":"rose","number":"08","category":"books","categoryLabel":"","description":"","summary":"","year":""},
+  {"title":"الاتباع لا الابتداع","href":"https://wbpsunna.com/books/%d8%a7%d9%84%d8%a7%d8%aa%d8%a8%d8%a7%d8%b9-%d9%84%d8%a7-%d8%a7%d9%84%d8%a7%d8%a8%d8%aa%d8%af%d8%a7%d8%b9/","image":"cooperation","tone":"emerald","number":"09","category":"books","categoryLabel":"","description":"","summary":"","year":""},
+  {"title":"راوية الاسلام وأزواجه امهاتهم","href":"https://wbpsunna.com/books/%d8%b1%d8%a7%d9%88%d9%8a%d8%a9-%d8%a7%d9%84%d8%a7%d8%b3%d9%84%d8%a7%d9%85-%d9%88%d8%a3%d8%b2%d9%88%d8%a7%d8%ac%d9%87-%d8%a7%d9%85%d9%87%d8%a7%d8%aa%d9%87%d9%85/","image":"terminology","tone":"amber","number":"10","category":"books","categoryLabel":"","description":"","summary":"","year":""},
+  {"title":"ميراث الجاهلية","href":"https://wbpsunna.com/books/%d9%85%d9%8a%d8%b1%d8%a7%d8%ab-%d8%a7%d9%84%d8%ac%d8%a7%d9%87%d9%84%d9%8a%d8%a9/","image":"preservation","tone":"mint","number":"11","category":"books","categoryLabel":"","description":"","summary":"","year":""},
+  {"title":"وإنا له لحافظون","href":"https://wbpsunna.com/books/%d9%88%d8%a5%d9%86%d8%a7-%d9%84%d9%87-%d9%84%d8%ad%d8%a7%d9%81%d8%b8%d9%88%d9%86/","image":"mahdi","tone":"rose","number":"12","category":"books","categoryLabel":"","description":"","summary":"","year":""},
+  {"title":"تعالوا نتفق","href":"https://wbpsunna.com/books/%d8%aa%d8%b9%d8%a7%d9%84%d9%88%d8%a7-%d9%86%d8%aa%d9%81%d9%82/","image":"cooperation","tone":"emerald","number":"13","category":"books","categoryLabel":"","description":"","summary":"","year":""},
+  {"title":"مصادر الاحكام الشرعية بين الفريقين","href":"https://wbpsunna.com/books/%d9%85%d8%b5%d8%a7%d8%af%d8%b1-%d8%a7%d9%84%d8%a7%d8%ad%d9%83%d8%a7%d9%85-%d8%a7%d9%84%d8%b4%d8%b1%d8%b9%d9%8a%d8%a9-%d8%a8%d9%8a%d9%86-%d8%a7%d9%84%d9%81%d8%b1%d9%82%d9%8a%d9%86/","image":"terminology","tone":"amber","number":"14","category":"books","categoryLabel":"","description":"","summary":"","year":""},
+  {"title":"كيف تكون زيارتنا لها","href":"https://wbpsunna.com/books/%d9%83%d9%8a%d9%81-%d8%aa%d9%83%d9%88%d9%86-%d8%b2%d9%8a%d8%a7%d8%b1%d8%aa%d9%86%d8%a7-%d9%84%d9%87%d8%a7/","image":"preservation","tone":"mint","number":"15","category":"books","categoryLabel":"","description":"","summary":"","year":""},
+  {"title":"كيف ظهروا ؟","href":"https://wbpsunna.com/books/%d9%83%d9%8a%d9%81-%d8%b8%d9%87%d8%b1%d9%88%d8%a7-%d8%9f/","image":"mahdi","tone":"rose","number":"16","category":"books","categoryLabel":"","description":"","summary":"","year":""}
 ]

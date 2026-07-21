@@ -8,12 +8,7 @@ export default function AboutObjectives() {
 
       <div className={styles.sectionContainer}>
         <header className={styles.centeredHeading}>
-          <span className={styles.sectionKicker}>أثر نعمل من أجله</span>
           <h2 id="objectives-title">أهدافنا</h2>
-          <p>
-            ثمانية مسارات استراتيجية تُحوّل رسالة الهيئة إلى عمل مؤسسي
-            وعلمي ملموس.
-          </p>
         </header>
 
         <div className={styles.objectivesGrid}>
@@ -29,7 +24,6 @@ export default function AboutObjectives() {
                   <Icon aria-hidden="true" />
                 </span>
                 <h3>{objective.title}</h3>
-                <p>{objective.description}</p>
               </article>
             );
           })}

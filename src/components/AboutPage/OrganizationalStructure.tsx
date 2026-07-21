@@ -12,9 +12,9 @@ import {
 import styles from "./AboutPage.module.css";
 
 const executiveCommittees = [
-  { title: "لجنة البحوث والتوثيق", icon: FiFileText },
-  { title: "لجنة الحوار", icon: FiMessageCircle },
-  { title: "اللجنة التنظيمية والمالية", icon: FiSettings },
+  { title: "لجنة الدراسات والبحوث", icon: FiFileText },
+  { title: "لجنة النشاط", icon: FiMessageCircle },
+  { title: "لجنة التخطيط و المتابعه", icon: FiSettings },
 ];
 
 const supportCommittees = [
@@ -28,9 +28,7 @@ export default function OrganizationalStructure() {
     <section className={styles.structure} aria-labelledby="structure-title">
       <div className={styles.sectionContainer}>
         <header className={styles.centeredHeading}>
-          <span className={styles.sectionKicker}>حوكمة واضحة</span>
           <h2 id="structure-title">الهيكل الإداري</h2>
-          <p>هيكل مؤسسي يربط القيادة بالتنفيذ واللجان المتخصصة.</p>
         </header>
 
         <div className={styles.orgChart}>
@@ -55,16 +53,10 @@ export default function OrganizationalStructure() {
                 <small>الإدارة التنفيذية</small>
                 <strong>الأمين العام</strong>
               </div>
-
               <div className={styles.committees}>
                 {executiveCommittees.map((committee) => {
                   const Icon = committee.icon;
-                  return (
-                    <div className={styles.committee} key={committee.title}>
-                      <Icon aria-hidden="true" />
-                      {committee.title}
-                    </div>
-                  );
+                  return <div className={styles.committee} key={committee.title}><Icon aria-hidden="true" />{committee.title}</div>;
                 })}
               </div>
             </div>
@@ -75,16 +67,10 @@ export default function OrganizationalStructure() {
                 <small>الدعم التنفيذي</small>
                 <strong>الأمين العام المساعد</strong>
               </div>
-
               <div className={styles.committees}>
                 {supportCommittees.map((committee) => {
                   const Icon = committee.icon;
-                  return (
-                    <div className={styles.committee} key={committee.title}>
-                      <Icon aria-hidden="true" />
-                      {committee.title}
-                    </div>
-                  );
+                  return <div className={styles.committee} key={committee.title}><Icon aria-hidden="true" />{committee.title}</div>;
                 })}
               </div>
             </div>

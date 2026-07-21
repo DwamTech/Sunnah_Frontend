@@ -1,63 +1,14 @@
 [
-  {
-    "number": "01",
-    "title": "من رحاب المسجد النبوي: هديٌ يبني الإنسان",
-    "description": "حلقة معرفية تستعرض أثر الهدي النبوي في بناء الإنسان وتوازنه الروحي والاجتماعي.",
-    "category": "series",
-    "categoryLabel": "سلسلة معرفية",
-    "duration": "18:42",
-    "date": "يوليو 2026",
-    "image": "main",
-    "featured": true
-  },
-  {
-    "number": "02",
-    "title": "السنة النبوية وبناء الوعي المعاصر",
-    "description": "قراءة مرئية في دور السنة في تشكيل الوعي ومواجهة تحديات العصر بلغة علمية واضحة.",
-    "category": "programs",
-    "categoryLabel": "برنامج علمي",
-    "duration": "12:18",
-    "date": "يونيو 2026",
-    "image": "mosque"
-  },
-  {
-    "number": "03",
-    "title": "قيم الرحمة في هدي النبي ﷺ",
-    "description": "رسالة قصيرة حول الرحمة باعتبارها قيمة ممتدة في العبادة والأسرة والمجتمع.",
-    "category": "messages",
-    "categoryLabel": "رسائل مرئية",
-    "duration": "09:35",
-    "date": "مايو 2026",
-    "image": "courtyard"
-  },
-  {
-    "number": "04",
-    "title": "دروس من السيرة لبناء مجتمع متماسك",
-    "description": "مشاهد ومحطات من السيرة النبوية تقدم نماذج عملية للتعاون والثقة والمسؤولية.",
-    "category": "series",
-    "categoryLabel": "سلسلة السيرة",
-    "duration": "16:10",
-    "date": "أبريل 2026",
-    "image": "panorama"
-  },
-  {
-    "number": "05",
-    "title": "أخلاقيات التواصل في العالم الرقمي",
-    "description": "كيف نترجم الصدق والتثبت وحسن الخطاب إلى ممارسات يومية على المنصات الرقمية.",
-    "category": "programs",
-    "categoryLabel": "برنامج قضايا العصر",
-    "duration": "14:26",
-    "date": "مارس 2026",
-    "image": "main"
-  },
-  {
-    "number": "06",
-    "title": "الرفق داخل الأسرة: هديٌ وأثر",
-    "description": "رسالة تربوية تضيء قيمة الرفق والحوار وأثرهما في بناء الأمان النفسي داخل الأسرة.",
-    "category": "messages",
-    "categoryLabel": "رسائل أسرية",
-    "duration": "08:54",
-    "date": "فبراير 2026",
-    "image": "courtyard"
-  }
+  {"number":"01","title":"سلسلة حلقات التبيان في كشف حقيقة الاحمدية القاديانية ( 1 ) د. حمدي عبيد","description":"سلسلة حلقات التبيان في كشف حقيقة الاحمدية القاديانية ( 1 ) د. حمدي عبيد","category":"videos","categoryLabel":"","duration":"","date":"","image":"one","href":"https://wbpsunna.com/videos/%d8%b3%d9%84%d8%b3%d9%84%d8%a9-%d8%ad%d9%84%d9%82%d8%a7%d8%aa-%d8%a7%d9%84%d8%aa%d8%a8%d9%8a%d8%a7%d9%86-%d9%81%d9%8a-%d9%83%d8%b4%d9%81-%d8%ad%d9%82%d9%8a%d9%82%d8%a9-%d8%a7%d9%84%d8%a7%d8%ad%d9%85-2/"},
+  {"number":"02","title":"سلسلة حلقات التبيان في كشف حقيقة الاحمدية القاديانية ( 2 ) د. حمدي عبيد","description":"سلسلة حلقات التبيان في كشف حقيقة الاحمدية القاديانية ( 2 ) د. حمدي عبيد","category":"videos","categoryLabel":"","duration":"","date":"","image":"two","href":"https://wbpsunna.com/videos/%d8%b3%d9%84%d8%b3%d9%84%d8%a9-%d8%ad%d9%84%d9%82%d8%a7%d8%aa-%d8%a7%d9%84%d8%aa%d8%a8%d9%8a%d8%a7%d9%86-%d9%81%d9%8a-%d9%83%d8%b4%d9%81-%d8%ad%d9%82%d9%8a%d9%82%d8%a9-%d8%a7%d9%84%d8%a7%d8%ad%d9%85/"},
+  {"number":"03","title":"سلسلة حلقات التبيان في الرد على الاحمدية القاديانية ( 3 ) د. حمدي عبيد","description":"سلسلة حلقات التبيان في الرد على الاحمدية القاديانية ( 3 ) د. حمدي عبيد","category":"videos","categoryLabel":"","duration":"","date":"","image":"three","href":"https://wbpsunna.com/videos/%d8%b3%d9%84%d8%b3%d9%84%d8%a9-%d8%ad%d9%84%d9%82%d8%a7%d8%aa-%d8%a7%d9%84%d8%aa%d8%a8%d9%8a%d8%a7%d9%86-%d9%81%d9%8a-%d8%a7%d9%84%d8%b1%d8%af-%d8%b9%d9%84%d9%89-%d8%a7%d9%84%d8%a7%d8%ad%d9%85%d8%af-2/"},
+  {"number":"04","title":"سلسلة حلقات التبيان في الرد على الاحمدية القاديانية ( 4 ) د. حمدي عبيد","description":"سلسلة حلقات التبيان في الرد على الاحمدية القاديانية ( 4 ) د. حمدي عبيد","category":"videos","categoryLabel":"","duration":"","date":"","image":"four","href":"https://wbpsunna.com/videos/%d8%b3%d9%84%d8%b3%d9%84%d8%a9-%d8%ad%d9%84%d9%82%d8%a7%d8%aa-%d8%a7%d9%84%d8%aa%d8%a8%d9%8a%d8%a7%d9%86-%d9%81%d9%8a-%d8%a7%d9%84%d8%b1%d8%af-%d8%b9%d9%84%d9%89-%d8%a7%d9%84%d8%a7%d8%ad%d9%85%d8%af/"},
+  {"number":"05","title":"كلمة الدكتور/ ماجد بن محمد المرسال في مؤتمر خير أمة","description":"كلمة عضو الهيئة أسامة شحادة في مؤتمر خير أمة","category":"videos","categoryLabel":"","duration":"","date":"","image":"five","href":"https://wbpsunna.com/videos/%d9%83%d9%84%d9%85%d8%a9-%d8%a7%d9%84%d8%af%d9%83%d8%aa%d9%88%d8%b1-%d9%85%d8%a7%d8%ac%d8%af-%d8%a8%d9%86-%d9%85%d8%ad%d9%85%d8%af-%d8%a7%d9%84%d9%85%d8%b1%d8%b3%d8%a7%d9%84-%d9%81%d9%8a-%d9%85%d8%a4/"},
+  {"number":"06","title":"كلمة الدكتور/ عبد الله بن فهد اللحيدان في مؤتمر خير أمة","description":"كلمة عضو الهيئة أسامة شحادة في مؤتمر خير أمة","category":"videos","categoryLabel":"","duration":"","date":"","image":"six","href":"https://wbpsunna.com/videos/%d9%83%d9%84%d9%85%d8%a9-%d8%a7%d9%84%d8%af%d9%83%d8%aa%d9%88%d8%b1-%d8%b9%d8%a8%d8%af-%d8%a7%d9%84%d9%84%d9%87-%d8%a8%d9%86-%d9%81%d9%87%d8%af-%d8%a7%d9%84%d9%84%d8%ad%d9%8a%d8%af%d8%a7%d9%86-%d9%81/"},
+  {"number":"07","title":"كلمة معالي وزير الشؤون الاسلامية الشيخ/ صالح آل الشيخ في مؤتمر خير أمة","description":"","category":"videos","categoryLabel":"","duration":"","date":"","image":"seven","href":"https://wbpsunna.com/videos/%d9%83%d9%84%d9%85%d8%a9-%d9%85%d8%b9%d8%a7%d9%84%d9%8a-%d9%88%d8%b2%d9%8a%d8%b1-%d8%a7%d9%84%d8%b4%d8%a4%d9%88%d9%86-%d8%a7%d9%84%d8%a7%d8%b3%d9%84%d8%a7%d9%85%d9%8a%d8%a9-%d8%a7%d9%84%d8%b4%d9%8a/"},
+  {"number":"08","title":"كلمة عضو الهيئة أسامة شحادة في مؤتمر خير أمة","description":"كلمة عضو الهيئة أسامة شحادة في مؤتمر خير أمة","category":"videos","categoryLabel":"","duration":"","date":"","image":"eight","href":"https://wbpsunna.com/videos/%d9%83%d9%84%d9%85%d8%a9-%d8%b9%d8%b6%d9%88-%d8%a7%d9%84%d9%87%d9%8a%d8%a6%d8%a9-%d8%a3%d8%b3%d8%a7%d9%85%d8%a9-%d8%b4%d8%ad%d8%a7%d8%af%d8%a9-%d9%81%d9%8a-%d9%85%d8%a4%d8%aa%d9%85%d8%b1-%d8%ae%d9%8a/"},
+  {"number":"09","title":"عمائم الإرهاب – الحلقة 1","description":"عمائم الإرهاب – الحلقة 2","category":"videos","categoryLabel":"","duration":"","date":"","image":"nine","href":"https://wbpsunna.com/videos/%d8%b9%d9%85%d8%a7%d8%a6%d9%85-%d8%a7%d9%84%d8%a5%d8%b1%d9%87%d8%a7%d8%a8-%d8%a7%d9%84%d8%ad%d9%84%d9%82%d8%a9-1/"},
+  {"number":"10","title":"عمائم الإرهاب الحلقة 13","description":"عمائم الإرهاب الحلقة 13","category":"videos","categoryLabel":"","duration":"","date":"","image":"ten","href":"https://wbpsunna.com/videos/%d8%b9%d9%85%d8%a7%d8%a6%d9%85-%d8%a7%d9%84%d8%a5%d8%b1%d9%87%d8%a7%d8%a8-%d8%a7%d9%84%d8%ad%d9%84%d9%82%d8%a9-13/"},
+  {"number":"11","title":"عمائم الإرهاب – الحلقة 12","description":"عمائم الإرهاب الحلقة 13","category":"videos","categoryLabel":"","duration":"","date":"","image":"eleven","href":"https://wbpsunna.com/videos/%d8%b9%d9%85%d8%a7%d8%a6%d9%85-%d8%a7%d9%84%d8%a5%d8%b1%d9%87%d8%a7%d8%a8-%d8%a7%d9%84%d8%ad%d9%84%d9%82%d8%a9-12/"},
+  {"number":"12","title":"عمائم الإرهاب – الحلقة 11","description":"","category":"videos","categoryLabel":"","duration":"","date":"","image":"twelve","href":"https://wbpsunna.com/videos/%d8%b9%d9%85%d8%a7%d8%a6%d9%85-%d8%a7%d9%84%d8%a5%d8%b1%d9%87%d8%a7%d8%a8-%d8%a7%d9%84%d8%ad%d9%84%d9%82%d8%a9-11/"}
 ]

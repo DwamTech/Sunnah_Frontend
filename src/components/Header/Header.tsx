@@ -1,23 +1,25 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import type { IconType } from "react-icons";
 import {
   FiBookOpen,
+  FiArchive,
   FiChevronDown,
   FiFileText,
   FiGrid,
+  FiGlobe,
   FiHome,
   FiInfo,
   FiMenu,
   FiPlayCircle,
+  FiRadio,
   FiSearch,
+  FiUsers,
   FiX,
 } from "react-icons/fi";
-import logo from "../../../puplic/الهيئة_العالمية_للسنة_النبوية__1_-removebg-preview.png";
 import styles from "./Header.module.css";
 
 type NavigationChild = {
@@ -50,14 +52,15 @@ const navigation: NavigationItem[] = [
     href: "/research",
   },
   { label: "مرئيات", id: "media", icon: FiPlayCircle, href: "/media" },
+  { label: "المنظمات الأعضاء", id: "members", icon: FiUsers, href: "/member-organizations" },
+  { label: "ملفات وتقارير", id: "reports", icon: FiArchive, href: "/reports" },
+  { label: "بيانات صادرة", id: "statements", icon: FiFileText, href: "/statements" },
   {
-    label: "المزيد",
-    id: "more",
-    icon: FiGrid,
+    label: "إعلامية الهيئة",
+    id: "authority-media",
+    icon: FiRadio,
+    href: "/authority-media",
     children: [
-      { label: "المنظمات الأعضاء", href: "/member-organizations" },
-      { label: "ملفات وتقارير" },
-      { label: "بيانات صادرة", href: "/statements" },
       { label: "قنوات فضائية", href: "/authority-media/satellite-channels" },
       { label: "إذاعات راديو", href: "/authority-media/radio-stations" },
       { label: "مجلات ودوريات", href: "/authority-media/journals" },
@@ -78,18 +81,6 @@ export default function Header() {
 
       <div className={styles.container}>
         <div className={styles.identityRow}>
-          <div className={styles.brand}>
-            <span className={styles.logoFrame}>
-              <Image
-                className={styles.logo}
-                src={logo}
-                alt="شعار الهيئة العالمية للسنة النبوية"
-                priority
-              />
-            </span>
-            <span className={styles.brandText}>الهيئة العالمية للسنة النبوية</span>
-          </div>
-
           <nav
             className={`${styles.navigation} ${
               isMenuOpen ? styles.navigationOpen : ""
